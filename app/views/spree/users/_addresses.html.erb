@@ -2,7 +2,7 @@
 <% if spree_current_user.addresses.present? %>
 <div id='user_addresses'>
     <% spree_current_user.addresses.each do |address| %>
-    <div class="<%= cycle('even', 'odd') %> address-box" style="float:left;">
+    <div class="<%= cycle('even', 'odd') %> address-box" style="float:left; margin-bottom: 15px; border: 1px solid #d9d9db; padding: 10px;">
       <div class="address-text"><%= address %></div>
       <div class="address-buttons">
         <%= link_to Spree.t(:edit), edit_address_path(address) %>&nbsp;
@@ -19,3 +19,4 @@
 <div id='new_address_link'>
   <%= link_to t(:add_new_shipping_address), new_address_path %>
 </div>
+<div style="float:clear"></div>
